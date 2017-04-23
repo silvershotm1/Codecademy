@@ -1,0 +1,21 @@
+################### GIT IGNORE FILE ###
+
+
+###  OS LINUX  ##
+
+
+## FILES ##
+
+*~
+.fuse_hidden*
+.nfs*
+
+# file created when live edit files in html editor
+.swp
+
+
+## FOLDERS ##
+
+node_modules
+.directory
+.Trash-*
