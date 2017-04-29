@@ -1,0 +1,52 @@
+
+// QUERIES IN SQL
+
+// 1. Queries
+SELECT  name, imdb_rating FROM movies;
+
+// 2. SELECT II
+SELECT DISTINCT genre FROM movies;
+// used to return unique values in set
+
+// 3. SELECT DISTINCT
+SELECT * FROM movies WHERE imdb_rating > 8;
+
+// 4. Where
+Common operators used with the WHERE clause are:
+
+= equals
+!= not equals
+> greater than
+< less than
+>= greater than or equal to
+<= less than or equal to
+
+// 5 . Like - 1
+SELECT * FROM movies WHERE name LIKE 'Se_en';
+
+// 6. Like - 2
+SELECT * FROM movies WHERE name LIKE '%man%';
+
+// 7. BETWEEN
+SELECT * FROM movies WHERE name BETWEEN 'A' and 'J';
+SELECT * FROM movies WHERE year BETWEEN 1990 and 2000;
+
+// 8. AND
+SELECT * FROM movies WHERE year BETWEEN 1990 and 2000 AND genre = 'comedy';
+
+// 9. OR
+SELECT * FROM movies WHERE genre = 'comedy' OR year < 1980;
+
+// 10. ORDER BY
+SELECT * FROM movies ORDER BY imdb_rating DESC;
+
+// 11. LIMIT
+SELECT * FROM movies ORDER BY imdb_rating ASC LIMIT 3;
+
+// 12. Generalizations:
+SELECT                   -- WHEN YOU WANT INFO FROM DB
+WHERE                    -- FILTER RESULTS BASED ON USER CONDITIONS SPECIFIED
+LIKE & BETWEEN use WHERE -- SPECIAL OPS
+AND & OR use WHERE       -- FILTER WITH TWO OR MORE CONDITIONS
+ORDER BY                 -- FILTER RESULTS IN 'ASC' OR 'DESC' ORDER
+LIMIT                    -- SPECIFY MAX NUMBER OF ROWS A QUERY WILL RETURN

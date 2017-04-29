@@ -1,0 +1,56 @@
+
+// Multiple Tables in SQL
+
+//The data in these tables are related to each other. Through SQL, we can write
+//queries that combine data from //multiple tables that are related to one
+//another. This is one of the most powerful features of relational databases.
+
+// 1. Multiple Tables
+CREATE TABLE artists(id INTEGER PRIMARY KEY, name TEXT);
+
+// 2. Primary Keys
+SELECT * FROM albums;
+SELECT * FROM artists;
+SELECT * FROM artists WHERE id = 3;
+SELECT * FROM albums WHERE artist_id = 3;
+
+// 3. Foreign Keys
+
+// A foreign key is a column that contains the primary key of another table in
+// the database. We use foreign keys and primary keys to connect rows in two
+// different tables
+
+
+// 4. Cross Join
+SELECT albums.name, albums.year, artists.name FROM albums, artists;
+
+// Unfortunately the result of this cross join is not very useful.
+// It combines every row of the artists table with every row of the albums table.
+
+SELECT * FROM albums JOIN artists ON albums.artist_id = artists.id;
+
+// 5. Inner Join
+SELECT * FROM albums JOIN artists ON albums.artist_id = artists.id;
+
+
+// An inner join will combine rows from different tables if the join
+// condition is true.
+
+// 6. LEFT OUTER JOIN
+SELECT * FROM albums LEFT JOIN artists ON albums.artist_id = artists.id;
+
+// 7. AS
+SELECT albums.name AS 'Album', albums.year, artists.name AS 'Artist' FROM albums
+JOIN artists ON albums.artist_id = artists.id WHERE albums.year > 1980;
+
+// AS will rename column
+
+// 8. Generalizations:
+
+* Primary Key is a column that serves a unique identifier for row in the table. Values in this column must be unique and cannot be NULL.
+* Foreign Key is a column that contains the primary key to another table in the database. It is used to identify a particular row in the referenced table.
+* Joins are used in SQL to combine data from multiple tables.
+
+INNER JOIN    //Will combine rows from different tables if join condition is translucent-white
+LEFT OUTTER JOIN // Will return every row in left table, if join not met, NULL is added
+AS  // Allows renaming of columns
