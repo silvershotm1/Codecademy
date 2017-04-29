@@ -1,0 +1,28 @@
+
+// AGGREGATE FUNCTIONS
+
+// Aggregate functions compute a single result from a set of input values.
+
+// 1. Aggregate Functions
+SELECT * FROM fake_apps;
+
+// 2. COUNT Function
+SELECT COUNT(*) FROM fake_apps;
+SELECT COUNT(*) FROM fake_apps WHERE price = 0;
+
+// 3. GROUP BY
+SELECT price, COUNT(*) FROM fake_apps GROUP BY price;
+SELECT price, COUNT(*) FROM fake_apps WHERE downloads > 20000 GROUP BY price;
+
+// 4. SUM
+SELECT SUM(downloads) FROM fake_apps;
+
+// 5. MAX
+
+// 6. MIN
+
+// 7. Average
+
+// 8. Round
+
+// 9. Generalizations:
