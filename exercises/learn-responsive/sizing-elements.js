@@ -26,4 +26,16 @@ postH2--    font-size: 1.875rem;
 postH3--    font-size: 1.125rem;
 footer--    font-size: 1.125rem;
 
-// 4. Percentages
+// 4. Percentages -- Height and Width
+
+#blog {
+  width: 86%;
+}
+#blog .post {
+  width: 52%;
+}
+.post .image-container {
+  width: 100%;
+}
+
+// 5. Percentages -- Padding and Margin
