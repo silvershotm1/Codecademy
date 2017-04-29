@@ -1,0 +1,30 @@
+
+// Sustainable SCSS -- Best Practices
+
+// Partials are denoted with an _ before the file name;
+// @import will import the partial into our css
+// 4. Organizing with Partials
+@import "helper/variables";
+
+// 5. @Extend
+.absolute {
+   position: absolute
+}
+@extend .absolute;
+
+// 6. %Placeholders  // absolute in placeholder file
+
+%absolute {
+  position: absolute;
+}
+@extend %absolute;
+
+// 7. Extend Vs. Mixin
+@extend %center; // in span and H1 tag
+
+// 8. Generalizations:
+//Sustainability is key in Sass, planning out the structure of your files
+//and sticking to naming conventions for both variables, mixins, and selectors
+//can reduce complexity.
+
+// Understand the CSS OUTPUT

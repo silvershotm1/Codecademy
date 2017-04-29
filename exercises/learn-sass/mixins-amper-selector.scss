@@ -88,3 +88,11 @@ $stripe-properties: to bottom, 15%, blue, white;
 
 // In Sass, string interpolation is the process of placing a
 // variable string in the middle of two other strings.
+
+// 8  @include goes in the .word selector
+@mixin hover-color($color) {
+   &:hover{
+       color: $color;
+   }
+}
+@include hover-color(red);
