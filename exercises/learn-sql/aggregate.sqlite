@@ -16,13 +16,31 @@ SELECT price, COUNT(*) FROM fake_apps WHERE downloads > 20000 GROUP BY price;
 
 // 4. SUM
 SELECT SUM(downloads) FROM fake_apps;
+SELECT category, SUM(downloads) FROM fake_apps
+GROUP BY category;
 
 // 5. MAX
+SELECT MAX(downloads) FROM fake_apps;
+SELECT name, category, MAX(downloads) FROM fake_apps GROUP BY category;
 
 // 6. MIN
+SELECT MIN(downloads) FROM fake_apps;
+SELECT name, category, MIN(downloads) FROM fake_apps GROUP BY category;
 
 // 7. Average
+SELECT AVG(downloads) FROM fake_apps;
+SELECT price, AVG(downloads) FROM fake_apps GROUP BY price;
 
 // 8. Round
+SELECT price, ROUND(AVG(downloads),2) FROM fake_apps GROUP BY price; // rounds to 2 decimal places
+SELECT price, ROUND(AVG(downloads)) FROM fake_apps GROUP BY price;
 
 // 9. Generalizations:
+
+COUNT     // number can't be NULL
+GROUP BY  // combine  data from one or more columns
+SUM()     // returns sum of values of column
+MAX()     // returns largest value of column
+MIN()     // returns smallest value of column
+AVG()     // returns average value of column
+ROUND()   // returns rounded values of column
