@@ -1,0 +1,58 @@
+
+// Functions in SCSS
+//With Sass functions you can:
+
+// Operate on color values
+// Iterate on lists and maps
+// Apply styles based on conditions
+// Assign values that result from math operations
+
+// 1. Functions
+// -fade-in , fade-out
+
+//2. Arithmetic & color
+$lagoon-blue: fade-out(#62fdca, 0.5);
+
+// 3. Color Functions
+.math {
+  color: red + blue;
+}
+
+// 4. Arithmetic
+.math {
+  color: red + blue;
+  height: $width/6;
+  line-height: $width/6;
+  border-radius: $width/30;
+}
+
+// 5. Division can be special
+font-size: $width/6/2;
+
+// 6. Each Loops
+@each $item in $list {
+  .#{$item} {
+    background: $item;
+  }
+}
+
+// 7. For Loops
+@for $i from 1 through $total {
+  .ray:nth-child(#{$i}) {
+    background: blue;
+   }
+}
+@for $i from 1 through $total {
+  .ray:nth-child(#{$i}) {
+    background: adjust-hue(blue, $i * $step)
+  }
+}
+
+// 8. Conditionals
+@for $i from 1 through $total {
+  .ray:nth-child(#{$i}) {
+    background: adjust-hue(blue, $i * $step);
+    width: if($i % 2 == 0, 300px, 350px);
+		margin-left: if($i % 2 == 0, 0px, 50px);
+  }
+}
