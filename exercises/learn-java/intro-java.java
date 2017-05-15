@@ -81,9 +81,51 @@ public class Modulo {
 
 	}
 }
+// 10. RELATIONAL OPERATORS
+public class RelationalOperators {
+	public static void main(String[] args) {
 
+		System.out.println(6 > 7);
+
+	}
+}
+// 11. EQUALITY OPERATORS
+public class EqualityOperators {
+	public static void main(String[] args) {
+
+    boolean isFun = true;
+    boolean isNotFun = false;
+		System.out.println(isFun == isNotFun);
+
+	}
+}
+// 12. GENERALIZATIONS
+public class Generalizations {
+	public static void main(String[] args) {
+
+
+		boolean isComplete = true;
+		int awesomeLevel = 121;
+		int epicLevel = awesomeLevel * 2;
+		System.out.println(epicLevel);
+
+
+    // This is the comment of the code
+	}
+}
 
 // NOTES
 // 'int' data type only allows values between -2,147,483,648 and 2,147,483,647.
 // 'boolean' set to true/false
 // 'char' must be indicated with a single quote
+
+// Relational operators will always return a boolean value of true or false.
+
+// < : less than.
+// <=: less than or equal to.
+// >: greater than.
+// >=: greater than or equal to.
+
+// EQUALITY OPERATORS:
+// == EQUAL TO
+// != NOT EQUAL TO
