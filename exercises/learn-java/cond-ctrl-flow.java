@@ -69,7 +69,14 @@ public class Not {
 	}
 }
 // 5. Boolean OPS Precedence
+public class Precedence {
+	public static void main(String[] args) {
 
+		boolean riddle = !( 1 < 8 || (5 > 2 && 3 < 5));
+		System.out.println(riddle);
+
+	}
+}
 
 
 // NOTES:
@@ -77,3 +84,86 @@ public class Not {
 //  ! is evaluated first
 // && is evaluated second
 // || is evaluated third
+
+// 6. IF Statement
+public class If {
+	public static void main(String[] args) {
+
+		if (4 < 5) {
+
+			System.out.println("Access granted.");
+
+		}
+
+	}
+}
+// 7. IF-ELSE Statement
+public class IfElse {
+	public static void main(String[] args) {
+
+		if (8 < 10 && 8 > 10) {
+
+			System.out.println("Try again...");
+
+		} else {
+
+			System.out.println("Success!");
+
+		}
+
+	}
+}
+// 8. IF-ELSEIF-ELSE Statement
+public class IfElseIf {
+	public static void main(String[] args) {
+
+		int round = 3;
+
+		if (round > 12) {
+
+			System.out.println("The match is over!");
+
+		} else if (round > 0) {
+
+			System.out.println("The match is underway!");
+
+		}	else {
+
+			System.out.println("The boxing match hasn't started yet.");
+
+		}
+	}
+}
+// 9. TERNARY Condition
+public class Ternary {
+	public static void main(String[] args) {
+
+		int fuelLevel = 3;
+
+		char canDrive = (fuelLevel > 0) ? 'Y': 'N';
+		System.out.println(canDrive);
+
+	}
+}
+// 10. SWITCH Statement
+public class Switch {
+	public static void main(String[] args) {
+
+		char penaltyKick = 'R';
+
+		switch (penaltyKick) {
+
+			case 'L': System.out.println("Messi shoots to the left and scores!");
+								break;
+			case 'R': System.out.println("Messi shoots to the right and misses the goal!");
+								break;
+			case 'C': System.out.println("Messi shoots down the center, but the keeper blocks it!");
+								break;
+			default:
+				System.out.println("Messi is in position...");
+
+		}
+
+	}
+}
+// 11. 
